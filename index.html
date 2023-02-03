@@ -47,27 +47,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1><b>My Portfolio</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16">
+    <div class="w3-section w3-bottombar w3-padding-16 filters">
       <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black" onclick="filterSelection('all')">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-chart-line w3-margin-right" onclick="filterSelection('research')"></i>Research</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-computer w3-margin-right" onclick="filterSelection('tools')"></i>Tools and Software</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right" onclick="filterSelection('publications')"></i>Publications</button>
+      <button class="w3-button w3-black filter-option" data-filter="*" onclick=filterItems(event)>ALL</button>
+      <button class="w3-button w3-white filter-option" data-filter="research"><i class="fa fa-chart-line w3-margin-right" onclick=filterItems(event)></i>Research</button>
+      <button class="w3-button w3-white w3-hide-small filter-option" data-filter="tools"><i class="fa fa-computer w3-margin-right" onclick=filterItems(event)></i>Tools and Software</button>
+      <button class="w3-button w3-white w3-hide-small filter-option" data-filter="publications"><i class="fa fa-book w3-margin-right" onclick=filterItems(event)></i>Publications</button>
     </div>
     </div>
   </header>
   
   <!-- First Photo Grid-->
-  <div class="w3-row-padding">
+  <div class="w3-row-padding list">
+    <h3>Items</h3>
     <div class="w3-third w3-container w3-margin-bottom filterDiv publications all">
-      <a href="https://www.cambridge.org/core/journals/nordic-journal-of-linguistics/article/control-in-a-norwegian-grammar-maze/51820096D0D64E5A55F0C93B8BBAB645"></a><img src="njl.jpg" alt="Nordic Journal" style="width:50%" class="w3-hover-opacity"></a>
+      <a href="https://www.cambridge.org/core/journals/nordic-journal-of-linguistics/article/control-in-a-norwegian-grammar-maze/51820096D0D64E5A55F0C93B8BBAB645" target="_blank"><img src="njl.jpg" alt="Nordic Journal" style="width:50%" class="w3-hover-opacity"></a>
       <div class="w3-container w3-white">
         <p><b>Control in a Norwegian grammar maze (Larsen and Johansson, 2022)</b></p>
         <p>Coreference processing of Control constructions and their pronoun-containing counterparts can be studied experimentally using priming or interference paradigms. We replicate findings in a priming study on non-finite Control constructions in Norwegian (Larsen & Johansson, 2020) and contrast them with their finite counterparts using interference effects in a grammatical maze (G-maze) design. We asked participants to read sentences word-by-word and to select the grammatically correct continuation from two options. When the ungrammatical option was a potential antecedent from within the sentence, we predicted interference, i.e., longer reaction times compared to an unrelated baseline. We observed a trend towards significant interference effects when a participant was presented with either of the potential noun phrase (NP) antecedents of PRO in competition with the infinitive marker (test position zero) during the processing of a Control sentence. This indicates reactivation of potential antecedents at the infinitive marker, and a reactivation position (PRO) near or at the infinitive marker. We also observed significant differences between Control constructions and their pronoun counterparts. A significant interference effect was recorded for Subject Pronoun constructions when either potential NP antecedent of the pronoun was presented in competition with the pronoun itself. A similar trend was recorded for Object Pronoun sentences.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom filterDiv publications all">
-      <a href="https://benjamins.com/catalog/lald.64.05lar"></a><img src="jbbook.png" alt="John Benjamins" style="width:60%" class="w3-hover-opacity"></a>
+      <a href="https://benjamins.com/catalog/lald.64.05lar" target="_blank"><img src="jbbook.png" alt="John Benjamins" style="width:60%" class="w3-hover-opacity"></a>
       <div class="w3-container w3-white">
         <p><b>Gone with a trace? Reactivation at PRO positions (Larsen and Johansson, 2020)</b></p>
         <p>PRO is a theoretically attractive empty category proposed to fill the subject position in non-finite clauses. This chapter is concerned with the empirical evidence for PRO. We investigate reactivation patterns in Control sentences in Norwegian with data from two reaction time experiments. We use a picture recognition task to measure the time and position of PRO antecedent reactivation during sentence processing. The data analysis explores a baseline that has the ability to separate syntactic priming (correct PRO antecedent reactivation) and repetition priming. We find a significant effect of position and an effect of syntactic priming for Subject Control using mixed effects models. We discuss possible theoretical implications and necessary future research.</p>
@@ -79,15 +80,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-col m6">
       <img src="coffee.jpg" alt="Me Drinking Coffee" style="width:40%">
     </div>
-    <div class="w3-col m6">
-      <img src="bergen.jpg" alt="Bergen Mountain Top" style="width:60%">
-    </div>
   </div>
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h4><b>About Me</b></h4>
     <p>Linguist specializing in psycholinguistics and syntax. Interested in applying my data analysis and statistics skills in order to investigate research questions using computational methods.</p>
-    <p>Outside of work, I enjoy long-distance running, jigsaw puzzles, crocheting, and spending time with my dog.</p>
+    <p>Outside of work, I enjoy long-distance running, jigsaw puzzles, crocheting, cooking for friends and family, and spending time with my dog.</p>
     <hr>
     
     <h4><b>Technical Skills</b></h4>
